@@ -11,7 +11,15 @@
 ## Generate App Key
 - php artisan key:generate
 
--
+## Database Migration and Seeding Data
+- php artisan migrate --seed
+
+## Pharmacy
+- email => pharmacy@mail.com , password => password
+
+## User
+- email => user1@mail.com , password => password
+- email => user2@mail.com , password => password
 
 ## (.env) file updates
 
@@ -26,10 +34,6 @@ create below rows in your .env file
 - MAIL_USERNAME=your gmail account
 - MAIL_PASSWORD=your gmail password
 - MAIL_ENCRYPTION=tls
-
-
-## Database Migration and Seeding Data
-- php artisan migrate --seed
 
 
 ## License
