@@ -43,6 +43,3 @@ Route::controller(QuotationController::class)
         Route::post('/','store')->name('quotation.store');
     });
 
-// Route::controller(PrescriptionController::class)
-//     ->middleware('auth')
-//     ->prefix('pharmacy')

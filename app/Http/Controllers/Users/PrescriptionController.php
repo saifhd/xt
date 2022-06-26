@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Users\StorePrescriptionStoreRequest;
 use App\Models\Prescription;
-use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -61,7 +60,7 @@ class PrescriptionController extends Controller
             ->withCount('quotations')
             ->where('id',$id)
             ->first();
-            
+
         return view('users.prescriptions.show',[
             'prescription' => $prescription
         ]);
