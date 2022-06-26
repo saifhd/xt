@@ -29,7 +29,7 @@ class QuotationController extends Controller
 
         $prescription_user = Prescription::find($request->prescription_id)->user;
         $url = route('prescriptions.show',$request->prescription_id);
-        Mail::to($prescription_user->email)->send(new QuotationCreatedMail($url));
+        Mail::to($prescription_user->email)->queue(new QuotationCreatedMail($url));
 
         return redirect()->back()->with('success','Quetation Created Success');
     }

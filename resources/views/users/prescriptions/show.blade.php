@@ -37,6 +37,7 @@
 
 
                 </div>
+                @if(!($prescription->status === 0 || $prescription->status === 1))
                 @if ($prescription->quotations_count > 0 && auth()->user()->user_level == 2)
                     <div class="flex space-x-4 px-4 py-6">
                         <form action="{{ route('prescriptions.change-status',$prescription->id) }}" method="post">
@@ -52,6 +53,7 @@
                             <button type="submit" class="button px-6 py-3 bg-red-600 text-white">Reject</button>
                         </form>
                     </div>
+                @endif
                 @endif
             </div>
         </div>
